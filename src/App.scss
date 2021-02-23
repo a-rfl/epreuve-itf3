@@ -2,6 +2,10 @@
 
 .App {
   text-align: left;
+  section {
+    height: 100vh;
+    width: 100%;
+  }
   p {
     width: 90%;
     color: $font-color;
@@ -16,5 +20,17 @@
     background-color: $primary-color;
     border: none;
     font-style: $small-text;
+  }
+  h2 {
+    text-transform: capitalize;
+    font-size: $heading-size;
+    font-weight: 400;
+    line-height: 65px;
+    margin-bottom: 40px;
+    margin-top: 15px;
+  }
+  span {
+    color: $primary-color;
+    font-weight: 600;
   }
 }

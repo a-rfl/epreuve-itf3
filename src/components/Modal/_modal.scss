@@ -23,12 +23,20 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 700px;
     border-width: 2.5px;
     background-color: $bg-color;
     padding: 20px;
+    padding-bottom: 10px;
     border-radius: 4px;
     h2 {
       text-align: center;
+      margin-bottom: 5px;
+    }
+    h3 {
+      width: 75%;
+      margin: auto;
+      text-align: right;
     }
     .btn-modal {
       position: absolute;
@@ -39,12 +47,24 @@
       border-radius: 50%;
     }
     p {
+      width: 85%;
       margin: auto;
+      text-transform: capitalize;
+      span {
+        font-size: $text-size + 2;
+        text-transform: uppercase;
+      }
+      ul {
+        list-style-type: circle;
+        li {
+          margin: 5px auto;
+        }
+      }
     }
     .command-text {
-      width: 100%;
-      font-style: $small-text;
-      margin-top: 20px;
+      width:100%;
+      margin-top: 25px;
+      text-transform: none;
       text-align: right;
     }
   }
