@@ -1,22 +1,17 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
 import Btn from '../Btn/Btn';
 import './_header.scss';
 
-const Header = ({
-  imgName, imgAlt, musicName,
-}) => {
-  const [music, setMusic] = useState(true);
+const Header = ({ imgName, imgAlt, musicName }) => {
+  const audio = new Audio();
+  audio.src = `sounds/${musicName}.mp3`;
 
-  // ** FIX ME **
-  // Can not pause the audio yet
   const toggleMusic = () => {
-    setMusic(!music);
-    const audio = new Audio(`sounds/${musicName}.mp3`);
-    if (music) {
+    if (audio.paused) {
       audio.play();
-    } else if (audio) {
-      audio.stop();
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
     }
   };
 
