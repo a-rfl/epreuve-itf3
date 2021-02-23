@@ -12,7 +12,7 @@
     font-size: $text-size;
     line-height: 22px;
   }
-  button {
+  .btn {
     color: white;
     text-transform: uppercase;
     font-weight: 600;
@@ -20,6 +20,10 @@
     background-color: $primary-color;
     border: none;
     font-style: $small-text;
+    &:hover {
+      background-color: $bg-color;
+      color: $primary-color;
+    }
   }
   h2 {
     text-transform: capitalize;

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import './App.scss';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
@@ -44,9 +44,10 @@ function App() {
       });
     }
   };
+
   return (
     <main className="App">
-      <Header imgName="logo.png" imgAlt="Logo du restaurant Maison Salvi" />
+      <Header imgName="logo.png" imgAlt="Logo du restaurant Maison Salvi" musicName="Jean-Jacques Perrey - in a happy moog" />
       <SectionHome btnFunction={toggleModal}>
         La Maison Salvi vous offre chaque jour le choix entre un menu carné ou
         végé: 10&nbsp;&euro; livraison incluse (sur Rennes uniquement).
@@ -58,10 +59,13 @@ function App() {
         Il est temps de passer commande !
       </SectionHome>
       <SectionArchives btnFunction={() => console.log('ok')} />
+      <Footer />
+
+      {/* Modals */}
       <Modal
         date={modalContent.date}
         btnFunction={toggleModal}
-        visibile={visibility}
+        visible={visibility}
       >
         <span>Entrées</span>
         <ul>
@@ -76,7 +80,6 @@ function App() {
           {modalContent.desserts.map((item) => <li>{item}</li>)}
         </ul>
       </Modal>
-      <Footer />
     </main>
   );
 }
