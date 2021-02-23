@@ -3,11 +3,19 @@
 header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: $header-footer-height;
   .header-img {
     height: $header-footer-height / 1.15;
     width: auto;
     margin-left: 200px;
+  }
+  .btn-music {
+    width: 94px;
+    margin-right: 25px;
+    padding: 10px 13px;
+    border-radius: 10px;
+    text-align: center;
   }
 }

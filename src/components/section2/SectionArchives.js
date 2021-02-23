@@ -10,6 +10,7 @@ import img4 from './img_slider/4.jpg';
 import img5 from './img_slider/5.jpg';
 // Svg
 import splash from '../splash.svg';
+import Btn from '../Btn/Btn';
 
 const SectionArchives = ({ btnFunction }) => {
   const settings = {
@@ -44,9 +45,7 @@ const SectionArchives = ({ btnFunction }) => {
             Je vous propose de passer en revue les recettes, et donner votre
             avis. Choisissez votre favori !
           </p>
-          <button type="button" className="btn-vote" onClick={btnFunction}>
-            voter
-          </button>
+          <Btn label="voter" classNames="btn-vote" func={btnFunction} />
         </div>
         <div className="archives-content-right">
           <img className="img-perso" src="img/suri02.jpg" alt="Suri" />

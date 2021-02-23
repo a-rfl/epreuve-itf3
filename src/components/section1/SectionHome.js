@@ -3,6 +3,7 @@ import './_sectionHome.scss';
 // Svg
 import fullRound from '../full_round.svg';
 import strippedRound from '../stripped_round.svg';
+import Btn from '../Btn/Btn';
 
 const SectionHome = ({ children, btnFunction }) => (
   <section className="home">
@@ -14,7 +15,7 @@ const SectionHome = ({ children, btnFunction }) => (
         <p>
           {children}
         </p>
-        <button className="btn-menu" type="button" onClick={btnFunction}>menu du jour</button>
+        <Btn label="menu du jour" classNames="btn-menu" func={btnFunction} />
       </div>
       <img
         className="home-content-right"

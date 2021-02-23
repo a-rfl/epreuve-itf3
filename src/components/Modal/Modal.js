@@ -1,17 +1,16 @@
 import PropTypes from 'prop-types';
+import Btn from '../Btn/Btn';
 import './_modal.scss';
 
 const Modal = ({
-  date, children, btnFunction, visibile, contactNumber,
+  date, children, btnFunction, visible, contactNumber,
 }) => (
-  <div className={visibile ? 'visible' : 'invisible'}>
+  <div className={visible ? 'visible' : 'invisible'}>
     <div className="modal-overlay">
       <div className="modal">
         <h2>menu du <span>jour</span></h2>
         <h3>{date}</h3>
-        <button className="btn-modal" type="button" onClick={btnFunction}>
-          X
-        </button>
+        <Btn label="X" classNames="btn-modal" func={btnFunction} />
         <p>
           {children}
         </p>
@@ -25,12 +24,12 @@ Modal.propTypes = {
   date: PropTypes.string.isRequired,
   children: PropTypes.string.isRequired,
   btnFunction: PropTypes.func.isRequired,
-  visibile: PropTypes.bool,
+  visible: PropTypes.bool,
   contactNumber: PropTypes.string,
 };
 
 Modal.defaultProps = {
-  visibile: false,
+  visible: false,
   contactNumber: '06 66 666 666',
 };
 
