@@ -1,0 +1,17 @@
+@import "../../variables.scss";
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $header-footer-height;
+  background-color: $footer-color;
+  .footer-text {
+    color: white;
+    font-size: $footer-text-size;
+    a {
+      color: $footer-link-color;
+      text-transform: capitalize;
+    }
+  }
+}

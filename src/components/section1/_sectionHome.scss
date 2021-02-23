@@ -1,0 +1,35 @@
+@import "../../variables.scss";
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: $bg-color;
+  .home-container {
+    display: flex;
+    justify-content: space-between;
+    width: 850px;
+    .home-content-left {
+      width: 45%;
+      padding: 40px;
+      background-color: white;
+      img {
+        width: 175px;
+        height: 175px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      .btn-menu {
+        background-color: $btn-color;
+        color: white;
+        text-transform: uppercase;
+      }
+    }
+    .home-content-right {
+      width: 50%;
+      object-fit: cover;
+    }
+  }
+}
