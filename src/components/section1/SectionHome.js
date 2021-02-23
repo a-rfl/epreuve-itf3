@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import './_sectionHome.scss';
+// Svg
 import fullRound from '../full_round.svg';
 import strippedRound from '../stripped_round.svg';
 
@@ -24,6 +25,7 @@ const SectionHome = ({ children, btnFunction }) => (
   </section>
 );
 
+// Props type validation
 SectionHome.propTypes = {
   children: PropTypes.string,
   btnFunction: PropTypes.func.isRequired,
