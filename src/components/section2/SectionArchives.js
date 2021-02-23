@@ -19,7 +19,6 @@ const SectionArchives = ({ btnFunction }) => {
     autoplay: true,
     center: true,
     rewind: true,
-    autoHeight: true,
     autoWidth: true,
     loop: true,
     autoplayButtonOutput: false,
@@ -45,7 +44,7 @@ const SectionArchives = ({ btnFunction }) => {
             Je vous propose de passer en revue les recettes, et donner votre
             avis. Choisissez votre favori !
           </p>
-          <button type="submit" className="btn-vote" onClick={btnFunction}>
+          <button type="button" className="btn-vote" onClick={btnFunction}>
             voter
           </button>
         </div>
@@ -54,15 +53,18 @@ const SectionArchives = ({ btnFunction }) => {
           <img className="img-svg" src={splash} alt="Rond plein" />
         </div>
       </div>
+
+      {/* carousel */}
       <section className="slider">
         <TinySlider settings={settings}>
           {imgs.map((el, index) => (
             <div key={index}>
-              <img className="slider-img" src={el} data-src={el} alt="" />
+              <img className="slider-img" src={el} data-src={el} alt="Entrée, plat ou dessert de la Maison Salvi" />
             </div>
           ))}
         </TinySlider>
       </section>
+
     </section>
   );
 };

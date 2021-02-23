@@ -14,7 +14,7 @@ const SectionHome = ({ children, btnFunction }) => (
         <p>
           {children}
         </p>
-        <button className="btn-menu" type="submit" onClick={btnFunction}>menu du jour</button>
+        <button className="btn-menu" type="button" onClick={btnFunction}>menu du jour</button>
       </div>
       <img
         className="home-content-right"
