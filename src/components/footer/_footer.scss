@@ -8,7 +8,8 @@ footer {
   background-color: $footer-color;
   .footer-text {
     color: white;
-    font-size: $footer-text-size;
+    font-size: $small-text;
+    text-align: center;
     a {
       color: $footer-link-color;
       text-transform: capitalize;
