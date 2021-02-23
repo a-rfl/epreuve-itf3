@@ -1,0 +1,60 @@
+@import "../../variables.scss";
+
+.archives {
+  height: 100vh;
+  width: 100%;
+  .archives-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 950px;
+    margin: auto;
+    .archives-content-left {
+      width: 50%;
+      padding-left: 25px;
+      h2 {
+        text-transform: capitalize;
+        font-size: $heading-size;
+        font-weight: 400;
+        line-height: 65px;
+        margin-bottom: 40px;
+        margin-top: 15px;
+        span {
+          color: $primary-color;
+          font-weight: 600;
+        }
+      }
+      .btn-vote {
+        margin-top: 20px;
+        border-radius: 50px;
+        width: 120px;
+        padding: 10px 0;
+      }
+    }
+    .archives-content-right {
+      position: relative;
+      width: 50%;
+      .img-svg {
+        width: 500px;
+        height: 475px;
+        margin: auto;
+      }
+      .img-perso{
+        position: absolute;
+        top: 50%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        width: 320px;
+        border-radius: 50%;
+      }
+
+    }
+  }
+  .slider {
+    width: 900px;
+    margin: auto;
+    .slider-img {
+      width: 275px;
+    }
+  }
+}
